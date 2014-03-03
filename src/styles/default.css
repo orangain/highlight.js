@@ -152,6 +152,11 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
   opacity: 0.5;
 }
 
+/* line-numbers */
+
+.hljs {
+  padding-left: 0;
+}
 pre {
   counter-reset: lines;
 }
@@ -159,8 +164,14 @@ pre .line {
   counter-increment: lines;
 }
 pre .line::before {
-  content: counter(lines); text-align: right;
-  display: inline-block; width: 2em;
-  padding-right: 0.5em; margin-right: 0.5em;
-  color: #BBB; border-right: solid 1px;
+  content: counter(lines);
+  text-align: right;
+  display: inline-block;
+  width: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+  color: #BBB;
+  border-right: solid 1px;
+  -webkit-user-select: none;
 }
